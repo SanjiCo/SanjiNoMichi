@@ -1,0 +1,36 @@
+Ödev 10
+
+
+Merhabalar,
+
+
+
+Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
+
+
+
+city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
+    SELECT city.city, country.country
+FROM city
+LEFT JOIN country ON city.country_id = country.country_id;
+
+customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+    SELECT payment.payment_id, customer.first_name, customer.last_name
+FROM payment
+RIGHT JOIN customer ON payment.customer_id = customer.customer_id;
+
+customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+    SELECT c.customer_id, c.first_name, c.last_name, r.rental_id
+FROM customer c
+LEFT JOIN rental r ON c.customer_id = r.customer_id
+
+UNION
+
+SELECT c.customer_id, c.first_name, c.last_name, r.rental_id
+FROM customer c
+RIGHT JOIN rental r ON c.customer_id = r.customer_id
+WHERE c.customer_id IS NULL;
+
+
+
+Kolay Gelsin.
