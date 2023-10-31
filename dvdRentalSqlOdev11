@@ -1,0 +1,44 @@
+Ödev 11
+
+
+Merhabalar,
+
+
+
+Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
+
+
+
+ACTOR VE CUSTOMER TABLOLARINDA BULUNAN FIRST_NAME SÜTUNLARI IÇIN TÜM VERILERI SIRALAYALIM.
+    -- actor tablosundaki first_name sütununu sırala
+SELECT first_name FROM actor;
+
+-- customer tablosundaki first_name sütununu sırala
+SELECT first_name FROM customer;
+
+ACTOR VE CUSTOMER TABLOLARINDA BULUNAN FIRST_NAME SÜTUNLARI IÇIN KESIŞEN VERILERI SIRALAYALIM.
+    SELECT first_name FROM actor
+INTERSECT
+SELECT first_name FROM customer;
+
+    
+ACTOR VE CUSTOMER TABLOLARINDA BULUNAN FIRST_NAME SÜTUNLARI IÇIN ILK TABLODA BULUNAN ANCAK IKINCI TABLODA BULUNMAYAN VERILERI SIRALAYALIM.
+    SELECT a.first_name
+FROM actor a
+LEFT JOIN customer c ON a.first_name = c.first_name
+WHERE c.first_name IS NULL;
+
+İlk 3 sorguyu tekrar eden veriler için de yapalım.
+    1-SELECT DISTINCT first_name FROM actor
+INTERSECT
+SELECT DISTINCT first_name FROM customer;
+    2-SELECT DISTINCT first_name FROM actor
+WHERE first_name NOT IN (SELECT DISTINCT first_name FROM customer);
+    3-SELECT DISTINCT a.first_name
+FROM actor a
+LEFT JOIN customer c ON a.first_name = c.first_name
+WHERE c.first_name IS NULL;
+
+
+
+Kolay Gelsin.
