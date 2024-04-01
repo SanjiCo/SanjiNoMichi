@@ -1,0 +1,23 @@
+Üniversite Yönetim Sistemi
+
+graph LR
+A(Üniversite)
+B(Departman)
+C(Çalışan) -- profesör --> D(Profesör)
+C(Çalışan) -- memur --> E(Memur)
+F(Ders)
+G(Ders Kayıt)
+H(Öğrenci)
+I(Fakülte)
+J(Sınav)
+K(Not)
+A(Üniversite) --> B(Departman)
+A(Üniversite) --> C(Çalışan)
+A(Üniversite) --> F(Ders)
+A(Üniversite) --> I(Fakülte)
+B(Departman) --> F(Ders)
+C(Çalışan) --> G(Ders Kayıt)
+H(Öğrenci) --> G(Ders Kayıt)
+H(Öğrenci) --> J(Sınav)
+J(Sınav) --> K(Not)
+
