@@ -1,0 +1,84 @@
+using System;
+
+namespace operatorler
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Atama ve İşlemli atama
+            int x = 3;
+            int y = 3;
+
+           // y = y + 2;
+            y += 2;
+            y /= 1;
+            x *= 2;
+            Console.WriteLine((-y)+x);
+
+            //mantıksal operatörler
+            // ||, &&, !
+            bool isSuccess = true;
+            bool isCompleted = false;
+
+            if (isSuccess && isCompleted)
+            {
+                Console.WriteLine("Perfecto");
+            }
+            if (isSuccess || isCompleted)
+            {
+                Console.WriteLine("Greato");
+            }
+            if (isSuccess && !isCompleted)
+            {
+                Console.WriteLine("Finetto");
+            }
+
+            //ilişkisel operatörler
+            // <, >, <=, >=, ==, !=
+            Console.WriteLine("ilişkisel operatörler");
+            int a = 3;
+            int b = 4;
+            bool c = a < b;
+
+            Console.WriteLine("A küçük mü B?: "+c);
+            c = a > b;
+            Console.WriteLine("A büyük mü B?: "+c);
+            c = a >= b;
+            Console.WriteLine("A büyük eşittir mi B?: "+c);
+            c = a <= b;
+            Console.WriteLine("A küçük eşittir mi B?: "+c);
+            c = a == b;
+            Console.WriteLine("A eşittir mi B?: "+c);
+            c = a != b;
+            Console.WriteLine("A eşit değil mi B?: "+c);
+
+            Console.WriteLine("Aritmetik operatörler");
+            // /, *, +, -,
+
+            int sayi = 10;
+            int sayi2 = 5;
+            int sayi3 = sayi / sayi2;
+            Console.WriteLine("10 ile 5 sayısının bölüm sonucu: " + sayi3);
+            sayi3 = sayi * sayi2;
+            Console.WriteLine("10 ile 5 sayısının çarpım sonucu: " + sayi3);
+            sayi3 = sayi + sayi2;
+            Console.WriteLine("10 ile 5 sayısının toplam sonucu: " + sayi3);
+            sayi3 = sayi - sayi2;
+            Console.WriteLine("10 ile 5 sayısının fark sonucu: " + sayi3);
+
+            // % mod almak için kullanılan operatör
+
+            int sayi4 = 20 % 3;
+            Console.WriteLine("20 sayısının 3 e bölümünden kalan: "+sayi4);
+
+
+
+
+
+
+
+
+        }
+    }
+}
