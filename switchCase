@@ -1,0 +1,42 @@
+using System;
+
+namespace switch_case
+{
+    internal class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            int month = DateTime.Now.Month;
+
+            switch (month)
+            {
+                case 1:
+                    Console.WriteLine("Ocak ayındasınız!");
+                    break;
+                case 2:
+                    Console.WriteLine("Şubat ayındasınız!");
+                    break;
+                case 4:
+                    Console.WriteLine("Nisan ayındasınız!");
+                    break;
+                default:
+                    Console.WriteLine("Yanlış veri girişi yapıldı!!!");
+                    break;
+            }
+            switch(month)
+            {
+                case 12:
+                case 1:
+                case 2:
+                    Console.WriteLine("Kış ayındasınız");
+                    break;
+
+                default:
+                    Console.WriteLine("Kış mevsimini atlattınız tebrikler!");
+
+                    break;
+            }
+        }
+    }
+}
