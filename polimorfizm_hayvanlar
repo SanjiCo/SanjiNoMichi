@@ -1,0 +1,40 @@
++--------------------------------------+
+|               Hayvan                 |
++--------------------------------------+
+| - tür: String                        |
+| - ağırlık: double                    |
+| - yaş: int                           |
++--------------------------------------+
+| + getDosage(): double                |
+| + getFeedSchedule(): String          |
++--------------------------------------+
+                      ^
+                      |
+         +------------+------------+
+         |                         |
++---------------------+   +---------------------+
+|       Atlar         |   |      Kedigiller     |
++---------------------+   +---------------------+
+| - tür: String        |   | - tür: String       |
+| - ağırlık: double    |   | - ağırlık: double   |
+| - yaş: int           |   | - yaş: int          |
++---------------------+   +---------------------+
+| + getDosage(): double|   | + getDosage(): double|
+| + getFeedSchedule(): |   | + getFeedSchedule():|
+|   String              |   |   String            |
++---------------------+   +---------------------+
+                      ^
+                      |
+            +---------+----------+
+            |                    |
++-------------------+   +-------------------+
+|     Kemirgenler   |   |   Diğer Hayvanlar |
++-------------------+   +-------------------+
+| - tür: String      |   | - tür: String     |
+| - ağırlık: double  |   | - ağırlık: double|
+| - yaş: int         |   | - yaş: int        |
++-------------------+   +-------------------+
+| + getDosage(): double| | + getDosage(): double|
+| + getFeedSchedule(): | | + getFeedSchedule():|
+|   String              | |   String          |
++----------------------+ +-------------------+
