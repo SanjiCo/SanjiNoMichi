@@ -1,0 +1,35 @@
++----------------------------------+
+|             Uygulama             |
++----------------------------------+
+| - filmler: List<Film>            |
+| - kullanıcılar: List<Kullanıcı>  |
++----------------------------------+
+| + filmEkle(film: Film): void     |
+| + filmSil(film: Film): void       |
+| + kullanıcıEkle(kullanıcı: Kullanıcı): void |
+| + kullanıcıSil(kullanıcı: Kullanıcı): void |
++----------------------------------+
+
++----------------------------------+
+|              Film                |
++----------------------------------+
+| - ad: String                     |
+| - tür: String                    |
+| - fiyat: double                  |
+| - mevcut: boolean                |
+| - talepSayısı: int               |
++----------------------------------+
+| + talepEt(): void                |
++----------------------------------+
+
++----------------------------------+
+|            Kullanıcı             |
++----------------------------------+
+| - ad: String                     |
+| - abone: boolean                 |
+| - kredi: double                  |
++----------------------------------+
+| + krediSatınAl(miktar: double): void |
+| + filmKiralama(film: Film): boolean |
+| + filmSatınAl(film: Film): boolean |
++----------------------------------+
