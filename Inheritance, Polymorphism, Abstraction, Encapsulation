@@ -1,0 +1,57 @@
++-----------------------------------+
+|             Building              |
++-----------------------------------+
+| - floors: int                     |
+| - elevators: List<Elevator>      |
+| - arrivalSignals: List<Signal>    |
++-----------------------------------+
+| + Building(floors: int)          |
+| + addElevator(elevator: Elevator): void |
+| + addArrivalSignal(signal: Signal): void |
+| + simulate(): void                |
++-----------------------------------+
+
++-----------------------------------+
+|            Elevator               |
++-----------------------------------+
+| - capacity: int                   |
+| - currentFloor: int               |
+| - targetFloors: List<int>         |
+| - doorsOpen: boolean              |
+| - direction: Direction            |
+| - controlPanel: ControlPanel      |
+| - arrivalSignal: Signal           |
++-----------------------------------+
+| + Elevator(capacity: int)         |
+| + addTargetFloor(floor: int): void |
+| + move(): void                    |
+| + openDoors(): void               |
+| + closeDoors(): void              |
++-----------------------------------+
+
++-----------------------------------+
+|          ControlPanel             |
++-----------------------------------+
+| - buttons: List<Button>          |
++-----------------------------------+
+| + addDestinationButton(floor: int): void |
++-----------------------------------+
+
++-----------------------------------+
+|            Signal                 |
++-----------------------------------+
+| - floor: int                      |
+| - direction: Direction            |
+| - lightOn: boolean                |
++-----------------------------------+
+| + activate(): void                |
+| + deactivate(): void              |
++-----------------------------------+
+
++-----------------------------------+
+|             Button                |
++-----------------------------------+
+| - floor: int                      |
+| - direction: Direction            |
++-----------------------------------+
+
